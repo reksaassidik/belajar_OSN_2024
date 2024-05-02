@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, i, j, a;
+    int angka[25];
+
+    cout<<"banyak array = ";
+    cin>>n;
+
+    for(i=1; i<=n; i++)
+    {
+        cout<<"masukan angka ke- "<<i<<" : ";
+        cin>>angka[i];
+    }
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=i; j++)
+        {
+            if(angka[i]<angka[j])
+            {
+                a=angka[i];
+                angka[i]=angka[j];
+                angka[j]=a;
+            }
+        }
+    }
+    cout<<"\nUrutan Nilai Terbesar Array dari yang Terkecil ke Terbesar :\n";
+    for(i=1; i<=n; i++)
+    {
+        cout<<"Angka ke- "<<i<<" = "<<angka[i]<<endl;
+
+    }
+}
